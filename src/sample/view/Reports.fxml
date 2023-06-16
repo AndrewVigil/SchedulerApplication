@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="765.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ReportsController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="6.0" prefHeight="754.0" prefWidth="984.0">
+         <children>
+            <Label layoutX="431.0" layoutY="38.0" text="Reports">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="349.0" layoutY="154.0" text="Total Number of Customers:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberCustomer" layoutX="585.0" layoutY="159.0" text="Label" />
+            <Label layoutX="194.0" layoutY="234.0" text="Total Customer Appointments by Type:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="typeLabel" layoutX="521.0" layoutY="239.0" text="Label" />
+            <Label layoutX="186.0" layoutY="305.0" text="Total Customer Appointments by Month:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="monthLabel" layoutX="521.0" layoutY="310.0" text="Label" />
+            <ComboBox fx:id="typeCombo" layoutX="629.0" layoutY="235.0" onAction="#onSelectType" prefWidth="150.0" />
+            <ComboBox fx:id="monthCombo" layoutX="629.0" layoutY="306.0" onAction="#onSelectMonth" prefWidth="150.0" />
+            <Label layoutX="665.0" layoutY="217.0" text="Select Type" />
+            <Label layoutX="660.0" layoutY="288.0" text="Select Month" />
+            <Label layoutX="300.0" layoutY="428.0" text="Schedule by Contact">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="contactCombo" layoutX="499.0" layoutY="430.0" onAction="#onSelectContact" prefWidth="150.0" />
+            <TableView fx:id="reportTableView" layoutX="70.0" layoutY="480.0" prefHeight="200.0" prefWidth="871.0">
+              <columns>
+                <TableColumn fx:id="apptIdCol" prefWidth="62.0" text="Appt ID" />
+                <TableColumn fx:id="titleCol" prefWidth="129.0" text="Title" />
+                  <TableColumn fx:id="typeCol" prefWidth="136.0" text="Type" />
+                  <TableColumn fx:id="descriptionCol" prefWidth="222.0" text="Description" />
+                  <TableColumn fx:id="startCol" prefWidth="125.0" text="Start Date / TIme" />
+                  <TableColumn fx:id="endCol" prefWidth="119.0" text="End Date / Time" />
+                  <TableColumn fx:id="customerIdCol" prefWidth="77.0" text="Customer ID" />
+              </columns>
+            </TableView>
+            <Button layoutX="866.0" layoutY="52.0" mnemonicParsing="false" onAction="#toMainMenu" text="To Main Menu" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

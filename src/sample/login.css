@@ -1,0 +1,13 @@
+#login{
+
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+     -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 20,0,0,0 );
+    -fx-background-color: white
+}
+
+.root{
+    -fx-background-image: url("https://app.websitebackgroundmaker.com/static/media/particle_background.097a8652.PNG");
+}
+
+#ap{
+}
